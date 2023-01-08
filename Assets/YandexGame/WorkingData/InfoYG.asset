@@ -22,7 +22,7 @@ MonoBehaviour:
   fullscreenAdInterval: 60
   durationOfAdSimulation: 0.5
   LocalizationEnable: 1
-  callingLanguageCheck: 0
+  callingLanguageCheck: 1
   translateMethod: 0
   domainAutoLocalization: com
   CSVFileTranslate:
@@ -38,7 +38,7 @@ MonoBehaviour:
     hy: 0
     ka: 0
     et: 0
-    fr: 0
+    fr: 1
     kk: 0
     ky: 0
     lt: 0
@@ -48,19 +48,18 @@ MonoBehaviour:
     tk: 0
     uk: 0
     uz: 0
-    es: 0
-    pt: 0
+    es: 1
+    pt: 1
     ar: 0
     id: 0
     ja: 0
-    it: 0
-    de: 0
+    it: 1
+    de: 1
     hi: 0
   fonts:
     defaultFont:
     - {fileID: 12800000, guid: 555aa6b3cf1a7204c8c5daa84a8c768f, type: 3}
-    ru:
-    - {fileID: 12800000, guid: 555aa6b3cf1a7204c8c5daa84a8c768f, type: 3}
+    ru: []
     en:
     - {fileID: 12800000, guid: 555aa6b3cf1a7204c8c5daa84a8c768f, type: 3}
     tr:
