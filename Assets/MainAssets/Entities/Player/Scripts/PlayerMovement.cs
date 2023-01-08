@@ -16,12 +16,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        _jumpButton.onClick.AddListener(Jump);
+        _jumpButton.AddListener(Jump);
     }
 
     private void OnDisable()
     {
-        _jumpButton.onClick.RemoveListener(Jump);
+        _jumpButton.RemoveListener(Jump);
     }
 
     private void Jump()
