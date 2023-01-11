@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DistanceOutputer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Text _distanceText;
+    [SerializeField] private DistanceCounter _distanceCounter;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        _distanceText.text = $"{_distanceCounter.Distance}";
     }
 }

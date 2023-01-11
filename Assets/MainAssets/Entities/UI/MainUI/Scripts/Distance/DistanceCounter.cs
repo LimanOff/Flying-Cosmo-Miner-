@@ -1,18 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
+using YG;
 using UnityEngine;
+using System.Collections;
 
 public class DistanceCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Distance { get; private set; }
+
+    private Coroutine _coroutine;
+
+    private void Start()
     {
-        
+        Distance = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        InputHandler.OnWaitButtonClick += StartCount;
+        InputHandler.OnRewardRespawnButtonClick += StopCount;
+    }
+
+    private void OnDisable()
+    {
+        InputHandler.OnWaitButtonClick -= StartCount;
+        InputHandler.OnRewardRespawnButtonClick -= StopCount;
+    }
+
+    private void StartCount()
+    {
+         _coroutine = StartCoroutine(Count());
+    }
+    private void StopCount()
+    {
+        StopCoroutine(_coroutine);
+    }
+
+    private IEnumerator Count()
+    {
+        while (true)
+        {
+            Distance++;
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

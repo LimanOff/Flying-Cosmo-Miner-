@@ -7,25 +7,28 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject _parent;
     [SerializeField] private GameObject[] _spawnPoints;
 
+    private Coroutine _coroutine;
+
     private void OnEnable()
     {
         InputHandler.OnWaitButtonClick += StartSpawning;
+        InputHandler.OnRewardRespawnButtonClick += StopSpawning;
     }
 
     private void OnDisable()
     {
         InputHandler.OnWaitButtonClick -= StartSpawning;
-        StopSpawning();
+        InputHandler.OnRewardRespawnButtonClick -= StopSpawning;
     }
 
     public void StartSpawning()
     {
-        StartCoroutine(SpawnEnemies());
+        _coroutine = StartCoroutine(SpawnEnemies());
     }
 
     public void StopSpawning()
     {
-        StopCoroutine(SpawnEnemies());
+        StopCoroutine(_coroutine);
     }
 
     private IEnumerator SpawnEnemies()
