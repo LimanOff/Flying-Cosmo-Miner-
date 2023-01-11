@@ -2,13 +2,13 @@ using UnityEngine;
 
 public static class TransformExtensions 
 {
-    public static void Activate(this Transform transform)
+    public static void MoveLeft(this Transform transform, float speed)
     {
-        transform.gameObject.SetActive(true);
+        transform.position += -transform.right * speed * Time.deltaTime;
     }
 
-    public static void Deactivate(this Transform transform)
+    public static void MoveRight(this Transform transform, float speed)
     {
-        transform.gameObject.SetActive(false);
+        transform.position += transform.right * speed * Time.deltaTime;
     }
 }

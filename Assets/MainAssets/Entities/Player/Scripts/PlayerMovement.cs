@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _jumpForce;
-    [SerializeField] private Button _jumpButton;
+
     private Rigidbody2D _rb;
 
     private void Start()
@@ -16,12 +16,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        _jumpButton.AddListener(Jump);
+        InputHandler.OnJumpButtonClick += Jump;
+        InputHandler.OnWaitButtonClick += Jump;
     }
 
     private void OnDisable()
     {
-        _jumpButton.RemoveListener(Jump);
+        InputHandler.OnJumpButtonClick -= Jump;
+        InputHandler.OnWaitButtonClick -= Jump;
     }
 
     private void Jump()

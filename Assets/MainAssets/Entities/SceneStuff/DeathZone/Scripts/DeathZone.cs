@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int HowMuchPlayerDie = 0;
+
+    public static Action OnPlayerDie;
+
+    private void OnDisable()
     {
-        
+        HowMuchPlayerDie = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            HowMuchPlayerDie++;
+            OnPlayerDie?.Invoke();
+        }
     }
 }
