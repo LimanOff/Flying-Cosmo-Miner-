@@ -3,11 +3,21 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    public static int HowMuchPlayerDie = 0;
+    public static int HowMuchPlayerDie;
 
     public static Action OnPlayerDie;
 
+    private void OnEnable()
+    {
+        InputHandler.OnJustRespawnButtonClick += ResetPlayerDie;
+    }
+
     private void OnDisable()
+    {
+        InputHandler.OnJustRespawnButtonClick -= ResetPlayerDie;
+    }
+
+    private void ResetPlayerDie()
     {
         HowMuchPlayerDie = 0;
     }

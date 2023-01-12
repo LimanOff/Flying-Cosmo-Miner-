@@ -68,14 +68,19 @@ public class InputHandler : MonoBehaviour
 
     private void Update()
     {
-        if (_coinCounter.CountOfCoins >= 0)
+        if (_coinCounter.CountOfCoins >= 25)
         {
             _moneyRespawnButton.interactable = true;
         }
-        //if (_coinCounter.CountOfCoins < 25)
-        //{
-        //    _moneyRespawnButton.interactable = false;
-        //}
+        if (_coinCounter.CountOfCoins < 25)
+        {
+            _moneyRespawnButton.interactable = false;
+        }
+
+        if (DeathZone.HowMuchPlayerDie == 3)
+        {
+            _rewardRespawnButton.interactable = false;
+        }
     }
 
     private void ExecuteDelegate(Action action)

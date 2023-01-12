@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Recorder : MonoBehaviour
 {
+    [SerializeField] private DistanceCounter _distanceCounter;
     private void OnEnable()
     {
         InputHandler.OnRewardRespawnButtonClick += ShowAd;
@@ -23,7 +24,7 @@ public class Recorder : MonoBehaviour
 
     private void RecordToLeaderBoard()
     {
-        YandexGame.NewLeaderboardScores("HowMuchDistanceCompleted", 1);
+        YandexGame.NewLeaderboardScores("HowMuchDistanceCompleted", _distanceCounter.Distance);
     }
 
     private void ReloadLevel()
