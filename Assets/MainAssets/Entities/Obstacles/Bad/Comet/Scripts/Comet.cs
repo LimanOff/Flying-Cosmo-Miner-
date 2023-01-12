@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Comet : MonoBehaviour
 {
+    [Range(10f,40f)]
     public float Speed;
 
     private void OnEnable()

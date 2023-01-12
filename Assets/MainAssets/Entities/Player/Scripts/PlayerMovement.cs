@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         _rb.isKinematic = false;
+        _rb.simulated = true;
+
         _rb.velocity = Vector2.zero;
         _rb.AddForce(Vector2.up * _jumpForce);
     }
