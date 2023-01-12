@@ -13,12 +13,14 @@ public class EnemySpawner : MonoBehaviour
     {
         InputHandler.OnWaitButtonClick += StartSpawning;
         InputHandler.OnRewardRespawnButtonClick += StopSpawning;
+        InputHandler.OnMoneyRespawnButtonClick += StopSpawning;
     }
 
     private void OnDisable()
     {
         InputHandler.OnWaitButtonClick -= StartSpawning;
         InputHandler.OnRewardRespawnButtonClick -= StopSpawning;
+        InputHandler.OnMoneyRespawnButtonClick -= StopSpawning;
     }
 
     public void StartSpawning()

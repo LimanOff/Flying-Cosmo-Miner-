@@ -16,11 +16,13 @@ public class PlayerRewarder : MonoBehaviour
     private void OnEnable()
     {
         YandexGame.OpenVideoEvent += ResetPosition;
+        InputHandler.OnMoneyRespawnButtonClick += ResetPosition;
     }
 
     private void OnDisable()
     {
         YandexGame.OpenVideoEvent -= ResetPosition;
+        InputHandler.OnMoneyRespawnButtonClick -= ResetPosition;
     }
 
     private void ResetPosition()

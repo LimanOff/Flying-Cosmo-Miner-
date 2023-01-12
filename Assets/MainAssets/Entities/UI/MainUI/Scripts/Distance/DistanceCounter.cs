@@ -17,12 +17,14 @@ public class DistanceCounter : MonoBehaviour
     {
         InputHandler.OnWaitButtonClick += StartCount;
         InputHandler.OnRewardRespawnButtonClick += StopCount;
+        InputHandler.OnMoneyRespawnButtonClick += StopCount;
     }
 
     private void OnDisable()
     {
         InputHandler.OnWaitButtonClick -= StartCount;
         InputHandler.OnRewardRespawnButtonClick -= StopCount;
+        InputHandler.OnMoneyRespawnButtonClick -= StopCount;
     }
 
     private void StartCount()

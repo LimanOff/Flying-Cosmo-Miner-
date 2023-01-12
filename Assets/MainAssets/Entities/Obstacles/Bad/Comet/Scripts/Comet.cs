@@ -9,11 +9,13 @@ public class Comet : MonoBehaviour
     private void OnEnable()
     {
         YandexGame.OpenVideoEvent += DestroyEnemy;
+        InputHandler.OnMoneyRespawnButtonClick += DestroyEnemy;
     }
 
     private void OnDisable()
     {
         YandexGame.OpenVideoEvent -= DestroyEnemy;
+        InputHandler.OnMoneyRespawnButtonClick -= DestroyEnemy;
     }
 
     private void Update()
@@ -23,6 +25,6 @@ public class Comet : MonoBehaviour
 
     private void DestroyEnemy()
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }
