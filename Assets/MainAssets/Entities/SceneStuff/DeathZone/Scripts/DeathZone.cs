@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    public int HowMuchPlayerDie = 0;
+    public static int HowMuchPlayerDie = 0;
 
     public static Action OnPlayerDie;
 
