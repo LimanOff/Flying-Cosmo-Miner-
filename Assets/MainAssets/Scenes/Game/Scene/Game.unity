@@ -2276,7 +2276,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C \u0437\u0430
-    \u043C\u043E\u043D\u0435\u0442\u044B\n(\u0432\u044B \u043F\u043E\u0442\u0435\u0440\u044F\u0435\u0442\u0441\u044F
+    \u043C\u043E\u043D\u0435\u0442\u044B (\u0432\u044B \u043F\u043E\u0442\u0435\u0440\u044F\u0435\u0442\u0441\u044F
     25 \u043C\u043E\u043D\u0435\u0442)"
 --- !u!222 &1125122800
 CanvasRenderer:
@@ -2301,23 +2301,21 @@ MonoBehaviour:
   textUIComponent: {fileID: 1125122799}
   textMeshComponent: {fileID: 0}
   infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
-  text: 
-  ru: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C \u0437\u0430
-    \u043C\u043E\u043D\u0435\u0442\u044B\n(\u0432\u044B \u043F\u043E\u0442\u0435\u0440\u044F\u0435\u0442\u0441\u044F
+  text: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C \u0437\u0430
+    \u043C\u043E\u043D\u0435\u0442\u044B (\u0432\u044B \u043F\u043E\u0442\u0435\u0440\u044F\u0435\u0442\u0441\u044F
     25 \u043C\u043E\u043D\u0435\u0442)"
-  en: 'Continue with coins
-
-'
-  tr: 'Madeni paralarla devam et
-
-'
+  ru: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C \u0437\u0430
+    \u043C\u043E\u043D\u0435\u0442\u044B\n (\u0432\u044B \u043F\u043E\u0442\u0435\u0440\u044F\u0435\u0442\u0441\u044F
+    25 \u043C\u043E\u043D\u0435\u0442)"
+  en: "Continue for coins\n (you will lose 25 coins)"
+  tr: "Jeton i\xE7in devam edin\n (25 jeton kaybedersiniz)"
   az: 
   be: 
   he: 
   hy: 
   ka: 
   et: 
-  fr: "Continuer avec les pi\xE8ces\n"
+  fr: "Continuez pour les pi\xE8ces\n (vous perdrez 25 pi\xE8ces)"
   kk: 
   ky: 
   lt: 
@@ -2327,25 +2325,19 @@ MonoBehaviour:
   tk: 
   uk: 
   uz: 
-  es: 'Continuar con monedas
-
-'
-  pt: 'Continuar com moedas
-
-'
+  es: "Contin\xFAa por monedas\n (perder\xE1s 25 monedas)"
+  pt: "Continue por moedas\n (voc\xEA perder\xE1 25 moedas)"
   ar: 
   id: 
   ja: 
-  it: 'Continua con le monete
-
-'
-  de: "Weiter mit M\xFCnzen\n"
+  it: "Continua per monete\n (perderai 25 monete)"
+  de: "Fahren Sie fort, um M\xFCnzen zu erhalten\n (Sie verlieren 25 M\xFCnzen)"
   hi: 
   fontNumber: 0
   uniqueFont: {fileID: 12800000, guid: 555aa6b3cf1a7204c8c5daa84a8c768f, type: 3}
   textHeight: 20
-  processTranslateLabel: 8/19 completed
-  componentTextField: 1
+  processTranslateLabel: 8/8 completed
+  componentTextField: 0
   countLang: 8
 --- !u!1 &1135835637
 GameObject:
