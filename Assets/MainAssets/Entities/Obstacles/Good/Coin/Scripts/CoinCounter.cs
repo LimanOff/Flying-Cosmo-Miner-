@@ -10,9 +10,11 @@ public class CoinCounter : MonoBehaviour
 
     private void Start()
     {
-        CountOfCoins = YandexGame.savesData.Money;
-
-        _countOfCoinsText.text = $"{CountOfCoins}";
+        if (YandexGame.SDKEnabled)
+        {
+            GetLoad();
+        }
+        
     }
 
     private void OnEnable()
@@ -22,6 +24,8 @@ public class CoinCounter : MonoBehaviour
 
         InputHandler.OnRewardRespawnButtonClick += SaveMoney;
         InputHandler.OnJustRespawnButtonClick += SaveMoney;
+
+        YandexGame.GetDataEvent += GetLoad;
     }
 
     private void OnDisable()
@@ -31,6 +35,8 @@ public class CoinCounter : MonoBehaviour
 
         InputHandler.OnRewardRespawnButtonClick -= SaveMoney;
         InputHandler.OnJustRespawnButtonClick -= SaveMoney;
+
+        YandexGame.GetDataEvent -= GetLoad;
     }
 
     private void AddCoins()
@@ -50,5 +56,12 @@ public class CoinCounter : MonoBehaviour
         YandexGame.savesData.Money = CountOfCoins;
 
         YandexGame.SaveProgress();
+    }
+
+    private void GetLoad()
+    {
+        CountOfCoins = YandexGame.savesData.Money;
+
+        _countOfCoinsText.text = $"{CountOfCoins}";
     }
 }
